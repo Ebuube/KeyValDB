@@ -3,6 +3,9 @@
 
 #include "lists.h"
 
+/* big enough and prime has good distribution with djb2 hash function */
+#define HT_DEFAULT_SIZE 1021
+
 /**
  * struct hash_table_s - hash table data structure
  * @buckets: array of pointers to head of linked lists
@@ -20,4 +23,6 @@ typedef struct hash_table_s
 
 /* Functions */
 unsigned long hash_djb2(const char *str);
+hash_table_t *ht_init(size_t size);
+
 #endif /* _HASHTABLE_H */
