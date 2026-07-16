@@ -14,6 +14,9 @@ void tearDown(void)
 {
 }
 
+/**
+ * test_print_empty_list - Test print empty list returns 0
+ */
 void test_print_empty_list(void)
 {
 	list_t *head = NULL;
@@ -24,6 +27,9 @@ void test_print_empty_list(void)
 	TEST_ASSERT_EQUAL_INT(0, count);
 }
 
+/*
+ * test_print_single_node - Test print single node returns 1
+ */
 void test_print_single_node(void)
 {
 	list_t *head = NULL;
@@ -33,6 +39,9 @@ void test_print_single_node(void)
 	TEST_ASSERT_EQUAL_INT(1, print_list(head));
 }
 
+/**
+ * test_print_non_empty_list - Test print non-empty list returns correct count
+ */
 void test_print_non_empty_list(void)
 {
 	list_t *head = NULL;
@@ -45,6 +54,9 @@ void test_print_non_empty_list(void)
 	TEST_ASSERT_EQUAL_INT(count, print_list(head));
 }
 
+/**
+ * test_print_very_long_list - Test print list of about 100 nodes returns correct count
+ */
 void test_print_very_long_list(void)
 {
 	list_t *head = NULL;
