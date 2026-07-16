@@ -11,13 +11,14 @@
  */
 bool del_node(list_t **h, const char *k)
 {
-	list_t *tmp = *h;
+	list_t *tmp = NULL;
 	list_t *prev = NULL;
 
 	if (h == NULL || *h == NULL || k == NULL)
 		return (false);
 
 	/* find node with key k */
+	tmp = *h;
 	while (tmp != NULL && strcmp(tmp->k, k) != 0)
 	{
 		prev = tmp;
