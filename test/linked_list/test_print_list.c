@@ -24,17 +24,25 @@ void test_print_empty_list(void)
 	TEST_ASSERT_EQUAL_INT(0, count);
 }
 
+void test_print_single_node(void)
+{
+	list_t *head = NULL;
+
+	add_node(&head, "key:1", "value:1");
+
+	TEST_ASSERT_EQUAL_INT(1, print_list(head));
+}
+
 void test_print_non_empty_list(void)
 {
 	list_t *head = NULL;
-	int count = 0;
+	int count = 2;
 
 	add_node(&head, "key:1", "value:1");
 	add_node(&head, "key:2", "value:2");
 
-	count = print_list(head);
 
-	TEST_ASSERT_EQUAL_INT(2, count);
+	TEST_ASSERT_EQUAL_INT(count, print_list(head));
 }
 
 void test_print_very_long_list(void)
