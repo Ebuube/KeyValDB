@@ -77,3 +77,21 @@ void test_update_string_is_copied(void)
 
 	TEST_ASSERT_TRUE(strcmp(value, node->v) != 0);
 }
+
+/**
+ * test_update_does_not_change_key - Test that updating a node does not change its key
+ */
+void test_update_does_not_change_key(void)
+{
+	list_t *head = NULL, *node = NULL;
+	char key[] = "key:2", value[] = "value:new";
+
+	add_node(&head, "key:1", "value:1");
+	add_node(&head, key, "value:2");
+	add_node(&head, "key:3", "value:3");
+
+	node = update_node(head, key, value);
+
+	TEST_ASSERT_NOT_NULL(node);
+	TEST_ASSERT_EQUAL_STRING(key, node->k);
+}
