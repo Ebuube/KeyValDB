@@ -12,7 +12,8 @@
  * @v: value associated with the k
  * @next: points to next node
  *
- * Description: singly linked list of key/value pairs, insertion is LIFO, keys are not unique, strings are owned copies and not aliases
+ * Description: singly linked list of key/value pairs, insertion is LIFO,
+ * keys are not unique, strings are owned copies and not aliases
  */
 typedef struct list_s
 {
