@@ -13,6 +13,9 @@ void tearDown(void)
 {
 }
 
+/**
+ * test_add_to_empty_list - Test add_node when list is empty
+ */
 void test_add_to_empty_list(void)
 {
 	list_t *head = NULL, *node = NULL;
@@ -31,6 +34,9 @@ void test_add_to_empty_list(void)
 	TEST_ASSERT_NULL(node->next);
 }
 
+/**
+ * test_add_to_non_empty_list - Test add_node when list is not empty
+ */
 void test_add_to_non_empty_list(void)
 {
 	list_t *head = NULL, *first = NULL, *second = NULL;
@@ -50,6 +56,9 @@ void test_add_to_non_empty_list(void)
 	TEST_ASSERT_NULL(first->next);
 }
 
+/**
+ * test_add_node_null_head - Test add_node with as NULL head pointer
+ */
 void test_add_node_null_head(void)
 {
 	list_t *node = NULL;
@@ -59,6 +68,9 @@ void test_add_node_null_head(void)
 	TEST_ASSERT_NULL(node);
 }
 
+/**
+ * test_add_node_null_key - Test add_node with NULL key should not add a node
+ */
 void test_add_node_null_key(void)
 {
 	list_t *head = NULL, *node = NULL;
@@ -69,6 +81,9 @@ void test_add_node_null_key(void)
 	TEST_ASSERT_NULL(head);
 }
 
+/**
+ * test_add_node_null_value - Test add_node with NULL value should not add a node
+ */
 void test_add_node_null_value(void)
 {
 	list_t *head = NULL, *node = NULL;
@@ -79,6 +94,9 @@ void test_add_node_null_value(void)
 	TEST_ASSERT_NULL(head);
 }
 
+/**
+ * test_add_node_copies_strings - Test that add_node copies the key and value strings and not just a re-assignment
+ */
 void test_add_node_copies_strings(void)
 {
 	list_t *head = NULL, *node = NULL;
