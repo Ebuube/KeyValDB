@@ -4,7 +4,8 @@
  * hash_djb2 - compute hash using Dnaiel J. Bernstein's algorithm
  * @str: string to hash
  *
- * Description: does not fail when str is upto 1000 chars long, order affects hash value
+ * Description: does not fail when str is upto 1000 chars long
+ * order affects hash value
  * Return: hash value
  */
 unsigned long hash_djb2(const char *str)
